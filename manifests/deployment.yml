@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: yusrapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yusrapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: yusrapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: yusrapipelinesjavascriptdocker 
+          image: ynregistry.azurecr.io/yusrapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
